@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recomendaciones</title>
+    <link rel="stylesheet" href="estilo.css">
+  </head>
+  <body>
+    <form action="javascript:sugerir();">
+      <h1>Formulario</h1>
+      <p>
+        <input type="text" id="nombre" required placeholder="nombre">
+      </p>
+      <p>
+        <input type="number" id="edad" required placeholder="edad">
+      </p>
+      <p>
+        <button type="submit">Enviar</button>
+      </p>
+      <footer>Jose Luis Monreal Eusebio 191241050.</footer>
+    </form>
+    <script>
+      function sugerir() {
+          let sug="";
+          const aux=edad.valueAsNumber;
+        if(aux<12 && aux>6){
+            sug=`los videjuegos recomendados para tu edad son\nCrash Bandicoot\nSpyro\nPokemon`;
+        }else if(aux>=12 && aux<18){
+            sug=`los videjuegos recomendados para tu edad son\nMedal off Honor\nDark Souls\nDragon Ball Xenoverse`;
+        }else if(aux>=18){
+            sug=`puedes jugar cualquier videojuego`;1
+        }else{
+            sug=`no tienes edad para los videojuegos :(`;
+        } 
+        const respuesta = `hola ${nombre.value}\n ${sug}`;
+
+        alert(respuesta);
+      }
+    </script>
+  </body>
+</html>
